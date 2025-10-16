@@ -33,13 +33,13 @@ public class Sort {
 
         while (left <= right) {
             int middle = (left + right) / 2;
-            int vergleich = quickfriends[middle].toLowerCase().compareTo(search.toLowerCase().trim());
+            int compare = quickfriends[middle].toLowerCase().compareTo(search.toLowerCase().trim());
             //trim = vernachlässigt leere Charakter (Leerzeichen)
 
-            if (vergleich == 0) {
+            if (compare == 0) {
                 return middle;
             }
-            else if (vergleich < 0) {
+            else if (compare < 0) {
                 left = middle + 1;
             }
             else {
